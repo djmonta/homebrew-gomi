@@ -6,6 +6,7 @@ class Gomi < Formula
     if OS.mac?
         if Hardware.is_64_bit?
             url "https://github.com/b4b4r07/gomi/releases/download/v#{version}/gomi_darwin_amd64"
+            sha256 "80253ea8c9ff3d345b4038145548b6697ab89d78ab4de6c64e51d12e8387d21a"
             KIND="amd64"
         else
             url "https://github.com/b4b4r07/gomi/releases/download/v#{version}/gomi_darwin_386"
