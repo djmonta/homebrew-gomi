@@ -7,6 +7,7 @@ class Gomi < Formula
     sha1 "2b3b5db55a6f6789fe8a649cc56f89f0fd487640"
 
     def install
+        system 'mv', "gomi_darwin_#{KIND}", 'gomi'
         bin.install 'gomi'
         system "curl -L https://raw.githubusercontent.com/b4b4r07/gomi/master/completions/zsh/_gomi >_gomi"
         zsh_completion.install "_gomi"
