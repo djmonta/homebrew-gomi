@@ -3,8 +3,17 @@ require "formula"
 class Gomi < Formula
     homepage "https://github.com/b4b4r07/gomi"
     version "0.1.6"
-    url "https://github.com/b4b4r07/gomi/releases/download/v#{version}/gomi"
-
+    if OS.mac?
+        if Hardware.is_64_bit?
+            url "https://github.com/b4b4r07/gomi/releases/download/v#{version}/gomi_darwin_amd64"
+            KIND="amd64"
+        else
+            url "https://github.com/b4b4r07/gomi/releases/download/v#{version}/gomi_darwin_386"
+            KIND="386"
+        end
+    elsif OS.linux?
+    end
+    
     def install
         bin.install 'gomi'
         system "curl -L https://raw.githubusercontent.com/b4b4r07/gomi/master/completions/zsh/_gomi >_gomi"
