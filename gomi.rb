@@ -2,7 +2,7 @@ require "formula"
 
 class Gomi < Formula
     homepage "https://github.com/b4b4r07/gomi"
-    version "0.1.5"
+    version "0.1.6"
     url "https://github.com/b4b4r07/gomi/releases/download/v#{version}/gomi"
     sha1 "2b3b5db55a6f6789fe8a649cc56f89f0fd487640"
 
