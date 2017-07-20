@@ -4,7 +4,7 @@ class Gomi < Formula
     homepage "https://github.com/b4b4r07/gomi"
     version "0.1.7"
     if OS.mac?
-        if Hardware.is_64_bit?
+        if CPU.is_64_bit?
             url "https://github.com/b4b4r07/gomi/releases/download/v#{version}/gomi_darwin_amd64"
             sha256 "f29424a1e2ecaf860b63a0bef5b9297e251c681928c7682f9c2818c11e46e2f5"
             KIND="amd64"
